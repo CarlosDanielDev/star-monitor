@@ -1,0 +1,8 @@
+{
+  "config": {
+    "line-length": false,
+    "no-inline-html": false
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["corpus/**", "node_modules/**"]
+}
