@@ -1,0 +1,219 @@
+{
+  "query": "stars:>1 fork:false",
+  "sort": "stars",
+  "order": "desc",
+  "per_page": 30,
+  "fetched_at": "2026-10-14",
+  "repos": [
+    {
+      "full_name": "codecrafters-io/build-your-own-x",
+      "stars": 553180,
+      "language": "Markdown",
+      "readme_sha": "9a553c729b29bc69296d7092fc1c314c2c811bad",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "sindresorhus/awesome",
+      "stars": 518832,
+      "language": null,
+      "readme_sha": "0acaa99d5f45582ecf70f987213f59ae1855226f",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "public-apis/public-apis",
+      "stars": 488629,
+      "language": "Python",
+      "readme_sha": "faa5048e654ea8f1d66829b45c140ede52409f4f",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "freeCodeCamp/freeCodeCamp",
+      "stars": 457048,
+      "language": "TypeScript",
+      "readme_sha": "17246c1b54e9bea2d9b000333b2161ed2ca64f35",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "EbookFoundation/free-programming-books",
+      "stars": 399032,
+      "language": "Python",
+      "readme_sha": "8f0dbeae6419706aeeffda712ca32992cf491776",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "openclaw/openclaw",
+      "stars": 391964,
+      "language": "TypeScript",
+      "readme_sha": "cf37326bfe36929d79f90be549be3ec6ac1a0434",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "donnemartin/system-design-primer",
+      "stars": 374199,
+      "language": "Python",
+      "readme_sha": "9e2cdb88dec86c34c9b49b657f5629a1866c6976",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "nilbuild/developer-roadmap",
+      "stars": 369365,
+      "language": "TypeScript",
+      "readme_sha": "82a8e6b5ec1ad49657693c8cb50032fc2c4a2242",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "jwasham/coding-interview-university",
+      "stars": 362490,
+      "language": null,
+      "readme_sha": "95a0d31a935c01c94f4b04ea5d8b7fc436c3dcf4",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "vinta/awesome-python",
+      "stars": 327344,
+      "language": "Python",
+      "readme_sha": "d3934ad821b3c108618cd1c0f2a0c5a4a50effbe",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "awesome-selfhosted/awesome-selfhosted",
+      "stars": 326486,
+      "language": null,
+      "readme_sha": "bfda6bf5bfd31d77f5d96995161adf41087f5077",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "obra/superpowers",
+      "stars": 298988,
+      "language": "Shell",
+      "readme_sha": "e40ddfa8f87a374e1b9a3663b80c1aa954cf8eec",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "mattpocock/skills",
+      "stars": 290721,
+      "language": "Shell",
+      "readme_sha": "f7038f139299985eea6c3e18398dbafb379a0010",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "practical-tutorials/project-based-learning",
+      "stars": 286677,
+      "language": "Python",
+      "readme_sha": "b5906c7ef98aa98401f51d10469da76eaa288091",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "affaan-m/ECC",
+      "stars": 279034,
+      "language": "JavaScript",
+      "readme_sha": "6583ca8c1320e559aa5b2f86250f2f09c1d577e9",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "996icu/996.ICU",
+      "stars": 277137,
+      "language": null,
+      "readme_sha": "3375c459ce6883cdc24c49ebb2ac29fe19b619b2",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "NousResearch/hermes-agent",
+      "stars": 253686,
+      "language": "Python",
+      "readme_sha": "93bab974fd07608879e36a2e7ef833ffdd3b7555",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "torvalds/linux",
+      "stars": 251789,
+      "language": "C",
+      "readme_sha": "010c587224224ba1254657b42b091a6c62c39e92",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "react/react",
+      "stars": 251009,
+      "language": "JavaScript",
+      "readme_sha": "6dd74794143a0ebfb6c6f094d3f2632d87ad628a",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "trimstray/the-book-of-secret-knowledge",
+      "stars": 250000,
+      "language": null,
+      "readme_sha": "2c1b9e4ee145961275b20df550d190446a65e579",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "deepseek-ai/deepseek-harness",
+      "stars": 249526,
+      "language": "TypeScript",
+      "readme_sha": "7941e30f7bdca9391befe39b9115d211157fa42d",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "morluto/rea",
+      "stars": 230960,
+      "language": "TypeScript",
+      "readme_sha": "2be1774fc0e7229028fcaa99d367cb3e26633e6f",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "TheAlgorithms/Python",
+      "stars": 225242,
+      "language": "Python",
+      "readme_sha": "e9a19fa15499332843dd51e0c9bced3b0b750988",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "multica-ai/andrej-karpathy-skills",
+      "stars": 219687,
+      "language": null,
+      "readme_sha": "7cf07a786532bebe01c65179c8e2c3a98cc0a09b",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "anomalyco/opencode",
+      "stars": 213433,
+      "language": "TypeScript",
+      "readme_sha": "1b88714753a4b6c26c6a69273b3a8e2030c10494",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "vuejs/vue",
+      "stars": 212560,
+      "language": "TypeScript",
+      "readme_sha": "274642ee3ae2f5ac647853cf43d123277188a0f5",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "ossu/computer-science",
+      "stars": 209984,
+      "language": "HTML",
+      "readme_sha": "ae69b33e2c93d27a893d9ff8e79fe2e88e591ff9",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "n8n-io/n8n",
+      "stars": 207355,
+      "language": "TypeScript",
+      "readme_sha": "21909fae00cbad4f18af84d2948752445051a915",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "DigitalPlatDev/FreeDomain",
+      "stars": 204097,
+      "language": "Markdown",
+      "readme_sha": "2c2a240dae197318630d8424cd9f410b52f9fa4b",
+      "fetched_at": "2026-10-14"
+    },
+    {
+      "full_name": "tensorflow/tensorflow",
+      "stars": 200963,
+      "language": "C++",
+      "readme_sha": "2ada91b134b2bc6daa60ca6265f1290f38a748c1",
+      "fetched_at": "2026-10-14"
+    }
+  ]
+}
