@@ -181,6 +181,27 @@ class FetchGuardTest(unittest.TestCase):
         self.assertEqual(len(data["repos"]), fetch_corpus.PER_PAGE)
         self.assertNotIn("pinned", data)
 
+    def test_failed_fetch_writes_nothing(self):
+        self.corpus.mkdir()
+        self.manifest.write_text('{"pinned": true}')
+        (self.corpus / "old---keep.md").write_bytes(b"old\n")
+
+        def fail_midway(full_name):
+            if full_name == "owner15/repo15":
+                raise RuntimeError("boom")
+            return b"stub readme\n"
+
+        with mock.patch.object(
+            fetch_corpus, "fetch_readme", side_effect=fail_midway
+        ):
+            with self.assertRaises(RuntimeError):
+                with contextlib.redirect_stdout(io.StringIO()):
+                    fetch_corpus.fetch(self.corpus, self.manifest, force=True)
+        self.assertEqual(
+            [p.name for p in self.corpus.glob("*.md")], ["old---keep.md"]
+        )
+        self.assertEqual(self.manifest.read_text(), '{"pinned": true}')
+
 
 if __name__ == "__main__":
     unittest.main()

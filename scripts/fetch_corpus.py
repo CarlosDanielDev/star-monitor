@@ -101,20 +101,25 @@ def fetch(
             "re-run with --force to overwrite it"
         )
     today = datetime.now(timezone.utc).date().isoformat()
-    corpus_dir.mkdir(parents=True, exist_ok=True)
     items = search_repos()
     if len(items) != PER_PAGE:
         raise RuntimeError(f"search returned {len(items)} repos, expected {PER_PAGE}")
 
-    entries = []
+    # Fetch everything before writing anything: a failed run must leave the
+    # existing corpus and manifest untouched instead of half overwriting them.
+    fetched = []
     for item in items:
         entry = entry_from_item(item)
-        data = fetch_readme(entry["full_name"])
+        fetched.append((entry, fetch_readme(entry["full_name"])))
+        print(f"fetched {entry['full_name']} ({entry['stars']} stars)")
+
+    corpus_dir.mkdir(parents=True, exist_ok=True)
+    entries = []
+    for entry, data in fetched:
         readme_path(corpus_dir, entry["full_name"]).write_bytes(data)
         entry["readme_sha"] = blob_sha(data)
         entry["fetched_at"] = today
         entries.append(entry)
-        print(f"fetched {entry['full_name']} ({entry['stars']} stars)")
 
     manifest = {
         "query": SEARCH_QUERY,
@@ -209,8 +214,8 @@ def main(argv: list[str] | None = None) -> int:
     except RuntimeError as error:
         print(f"ERROR: {error}", file=sys.stderr)
         print(
-            "A failed run may leave a partial corpus; re-running fetch "
-            "(with --force if a manifest exists) overwrites it cleanly.",
+            "Nothing was written; the existing corpus is untouched. "
+            "Re-run fetch (with --force if a manifest exists) to retry.",
             file=sys.stderr,
         )
         return 1
