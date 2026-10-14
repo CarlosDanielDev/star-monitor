@@ -1,0 +1,4 @@
+EP	README playbook from the 30 most-starred GitHub repos	epic	-
+L1	Corpus: fetch READMEs of the top-30 starred repos	story	EP
+L2	Analysis: common-README pattern report from the corpus	story	EP
+L3	Playbook: TEMPLATE.md + PLAYBOOK.md with cited findings	story	EP
