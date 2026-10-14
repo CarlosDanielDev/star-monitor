@@ -145,23 +145,25 @@ class NormalizeHeaderTest(unittest.TestCase):
         )
 
 
-class SplitHeadersTest(unittest.TestCase):
-    def test_counts_levels_one_to_three(self):
-        text = "# a\n\n## b\n\n### c\n\n#### d\n"
-        self.assertEqual(analyze_corpus.split_headers(text), ["a", "b", "c"])
-
-    def test_skips_fenced_code_lines(self):
-        text = "## real\n\n```bash\n# not a header\npip i x\n```\n\n~~~python\n# also not\n~~~\n"
-        self.assertEqual(analyze_corpus.split_headers(text), ["real"])
-
-    def test_unclosed_fence_drops_the_rest(self):
-        text = "## real\n\n```bash\n## swallowed\n"
-        self.assertEqual(analyze_corpus.split_headers(text), ["real"])
-
-
 class RepoMetricsTest(unittest.TestCase):
+    """repo_metrics is the only parsing path the report uses — pin its guards."""
+
+    def test_counts_levels_one_to_three(self):
+        metrics = analyze_corpus.repo_metrics("# a\n\n## b\n\n### c\n\n#### d\n")
+        self.assertEqual(metrics["headers"], ["a", "b", "c"])
+
     def test_blank_lines_do_not_count_toward_length(self):
         self.assertEqual(analyze_corpus.repo_metrics("# t\n\n\nbody\n")["lines"], 2)
+
+    def test_fenced_comment_is_not_a_header(self):
+        text = "## real\n\n```bash\n# not a header\npip i x\n```\n\n~~~python\n# also not\n~~~\n"
+        metrics = analyze_corpus.repo_metrics(text)
+        self.assertEqual(metrics["headers"], ["real"])
+        self.assertEqual(metrics["fences"], 4)
+
+    def test_unclosed_fence_drops_the_rest(self):
+        metrics = analyze_corpus.repo_metrics("## real\n\n```bash\n## swallowed\n")
+        self.assertEqual(metrics["headers"], ["real"])
 
 
 class AnalyzeCorpusTest(CorpusTestCase):

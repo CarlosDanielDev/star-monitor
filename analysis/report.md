@@ -90,5 +90,5 @@ examples: openclaw/openclaw, donnemartin/system-design-primer
 
 ### 10. Document length
 
-Median 163 non-blank lines per README; longest is public-apis/public-apis (2522), shortest is deepseek-ai/deepseek-harness (29).
+Median 163 non-blank lines outside code fences per README; longest is public-apis/public-apis (2522), shortest is deepseek-ai/deepseek-harness (29).
 examples: deepseek-ai/deepseek-harness, public-apis/public-apis

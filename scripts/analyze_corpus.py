@@ -42,23 +42,6 @@ def normalize_header(text: str) -> str:
     return SPACES.sub(" ", NON_WORD.sub(" ", text.lower())).strip()
 
 
-def split_headers(text: str) -> list[str]:
-    """Normalized text of every level 1-3 ATX header outside fenced blocks."""
-    headers = []
-    in_fence = False
-    for line in text.splitlines():
-        stripped = line.strip()
-        if FENCE.match(stripped):
-            in_fence = not in_fence
-            continue
-        if in_fence:
-            continue
-        match = ATX.match(stripped)
-        if match:
-            headers.append(normalize_header(match.group(2)))
-    return headers
-
-
 def repo_metrics(text: str) -> dict:
     """Per-README measurements: headers plus the binary pattern markers."""
     metrics = {
@@ -123,7 +106,7 @@ def pattern_defs() -> list[tuple[str, str, object]]:
          lambda m: has_header(m["headers"], lambda h: "contribut" in h)),
         ("Community or support section", "a community/support header",
          lambda m: has_header(m["headers"], lambda h: COMMUNITY.search(h))),
-        ("Document length", "non-blank lines",
+        ("Document length", "non-blank lines outside code fences",
          lambda m: m["lines"]),
     ]
 
