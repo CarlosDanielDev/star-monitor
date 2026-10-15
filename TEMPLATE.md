@@ -8,8 +8,11 @@
 
 ## Table of contents
 
+[Keep this section only if the README is longer than roughly 160 lines (the corpus median — PLAYBOOK.md, rule 9); otherwise delete it.]
+
 - [Installation](#installation)
 - [Usage](#usage)
+- [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Community](#community)
 - [Security](#security)
@@ -30,6 +33,10 @@
 ```[language]
 [code]
 ```
+
+## Documentation
+
+[Link the docs site, wiki, or docs/ folder.]
 
 ## Contributing
 

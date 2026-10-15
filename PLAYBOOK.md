@@ -25,8 +25,8 @@ When the two disagree, both are correct: they count different things.
 2. **Front-load the artifact: title, badges, one-paragraph pitch.** Badges
    appear in 10/30 READMEs (`analysis/report.md`, Top patterns #2). The
    report measures presence, not position — putting them in the first
-   screen is the epic's front-load call (ADR in #5/#8), consistent with
-   where these elements sit in the corpus.
+   screen is the epic's front-load call (ADR in #5/#8), not a measured
+   finding.
 
 3. **Show the thing.** 18/30 READMEs include at least one image or
    screenshot (`analysis/report.md`, Top patterns #4). A screenshot of the
@@ -66,6 +66,14 @@ When the two disagree, both are correct: they count different things.
     READMEs span 29 to 2,522 non-blank lines outside code fences, median
     163 (`analysis/report.md`, Top patterns #10). The 2,522-line maximum
     is an outlier (a pure list repo), not a target.
+
+11. **Say where the docs are and how to report a security issue.**
+    `documentation` appears in 7/30 READMEs and `security` in 5/30
+    (header-frequency table in `analysis/report.md`). Both rank below the
+    top patterns, so the corpus does not argue for them on prevalence —
+    the skeleton ships them because they answer questions every reader
+    eventually asks, and this rule exists so every template section has a
+    citation behind it.
 
 ## What to skip
 
